@@ -3,7 +3,8 @@
     <!-- Login 13 - Bootstrap Brain Component -->
     <section class="bg-light py-3 py-md-5">
         <div class="container">
-            <div class="row justify-content-center">
+          
+            <!-- <div class="row justify-content-center">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
                     <div class="card border border-light-subtle rounded-3 shadow-sm">
                         <div class="card-body p-3 p-md-4 p-xl-5">
@@ -14,7 +15,7 @@
                                 </a>
                             </div>
                             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign in to your account</h2>
-                            <form action="#!">
+                            <form action="{{ route('login') }}" method="POST">
                                 <div class="row gy-2 overflow-hidden">
                                     <div class="col-12">
                                         <div class="form-floating mb-3">
@@ -56,7 +57,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            
+                    @foreach ($test as $item )
+                    <div class="col-12">
+              <li>{{ $item->test }} </li>
+              </div>
+                    @endforeach
+                
         </div>
     </section>
 @endsection
